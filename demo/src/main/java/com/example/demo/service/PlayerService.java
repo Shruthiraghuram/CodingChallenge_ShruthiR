@@ -19,6 +19,9 @@ public class PlayerService {
     public List<Player> getAllPlayers() {
         return playerRepository.findAll();
     }
+    public List<Player> getAllWicketKeepers() {
+        return playerRepository.findByRole("WICKET_KEEPER");
+    }
 
     public Player getPlayerById(Long id) {
         return playerRepository.findById(id)

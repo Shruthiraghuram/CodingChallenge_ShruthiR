@@ -23,6 +23,11 @@ public class PlayerController {
         return ResponseEntity.ok(playerService.getAllPlayers());
     }
 
+    @GetMapping("/wicketkeepers")
+    public List<Player> getAllWicketKeepers() {
+        return playerService.getAllWicketKeepers();
+    }
+
     @GetMapping("/{playerId}")
     public ResponseEntity<Player> getPlayerById(@PathVariable Long playerId) {
         return ResponseEntity.ok(playerService.getPlayerById(playerId));
